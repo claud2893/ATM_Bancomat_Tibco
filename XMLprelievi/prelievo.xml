@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<prelievo xmlns="http://www.example.org/prelievo">
+  <nome>Mario</nome>
+  <cognome>Rossi</cognome>
+  <pin>10001</pin>
+  <importo_operazione>50</importo_operazione>
+</prelievo>
