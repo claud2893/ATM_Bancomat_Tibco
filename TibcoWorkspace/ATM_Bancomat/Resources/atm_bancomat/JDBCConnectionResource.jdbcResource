@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:subject="http://xsd.tns.tibco.com/trinity/models/identity/subject" xmi:id="_2YFlMMxyEfGTydlB16nc4w" name="atm_bancomat.JDBCConnectionResource" type="jdbc:JdbcDataSource">
-  <jndi:reference xmi:id="_2amGoMxyEfGTydlB16nc4w" key="subjectJndiName" type="subject:SubjectConfiguration" value=""/>
-  <jndi:configuration xsi:type="jdbc:JdbcDataSource" xmi:id="_2amGocxyEfGTydlB16nc4w" username="tibcouser" password="#!W0UxCN392TdpNURm1LSpzMPZjfRsnwDWg9Z9wvj4BmI=">
-    <connectionConfig xsi:type="jdbc:NonXaConnection" xmi:id="_2aoi4MxyEfGTydlB16nc4w" jdbcDriver="tibcosoftwareinc.jdbc.postgresql.PostgreSQLDriver" dbURL="jdbc:tibcosoftwareinc:postgresql://localhost:5432;DatabaseName=bw6_db"/>
-  </jndi:configuration>
-</jndi:namedResource>

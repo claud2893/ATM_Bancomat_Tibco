@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123f3a">
+  <title>Servizio prelievo - ATM BANCOMAT</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow">ATM BANCOMAT</p>
+      <h1>Servizio prelievo – ATM BANCOMAT</h1>
+      <p class="intro">Inserisci i tuoi dati e seleziona l’importo del prelievo.</p>
+    </header>
+
+    <form class="withdrawal-form" id="withdrawal-form" autocomplete="off">
+      <section class="form-section" aria-labelledby="personal-heading">
+        <h2 id="personal-heading">Dati personali</h2>
+        <div class="field-row">
+          <div class="field-group">
+            <label for="first-name">Nome <span aria-hidden="true">*</span></label>
+            <input class="text-input sanitized-input" id="first-name" name="nome" type="text" required maxlength="60" autocomplete="given-name">
+          </div>
+          <div class="field-group">
+            <label for="last-name">Cognome <span aria-hidden="true">*</span></label>
+            <input class="text-input sanitized-input" id="last-name" name="cognome" type="text" required maxlength="60" autocomplete="family-name">
+          </div>
+        </div>
+        <div class="field-group pin-group">
+          <label for="pin">PIN <span aria-hidden="true">*</span></label>
+          <input class="text-input sanitized-input" id="pin" name="pin" type="password" required inputmode="numeric" pattern="[0-9]{1,5}" maxlength="5" autocomplete="off" aria-describedby="pin-hint">
+          <small id="pin-hint">Da 1 a 5 cifre.</small>
+        </div>
+      </section>
+
+      <fieldset class="form-section amount-section">
+        <legend>Importo da prelevare <span aria-hidden="true">*</span></legend>
+        <div class="amount-options">
+          <label class="amount-option"><input type="radio" name="importo" value="50" required><span>50 €</span></label>
+          <label class="amount-option"><input type="radio" name="importo" value="100"><span>100 €</span></label>
+          <label class="amount-option"><input type="radio" name="importo" value="200"><span>200 €</span></label>
+          <label class="amount-option"><input type="radio" name="importo" value="altro"><span>Altro</span></label>
+        </div>
+        <div class="field-group custom-amount-group" id="custom-amount-group" hidden>
+          <label for="custom-amount">Importo personalizzato (€) <span aria-hidden="true">*</span></label>
+          <input class="text-input" id="custom-amount" name="importoAltro" type="text" inputmode="numeric" pattern="[0-9]{1,3}" maxlength="3" aria-describedby="custom-amount-hint" disabled>
+          <small id="custom-amount-hint">Inserisci un importo intero da 1 a 200 €.</small>
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <p class="required-note"><span aria-hidden="true">*</span> Campi obbligatori</p>
+        <button class="submit-button" id="submit-button" type="submit">Invia richiesta <span aria-hidden="true">→</span></button>
+      </div>
+      <p class="form-error" id="form-error" role="alert" hidden></p>
+    </form>
+  </main>
+
+  <dialog class="confirmation-dialog" id="confirmation-dialog" aria-labelledby="confirmation-heading">
+    <div class="confirmation-mark" id="confirmation-mark" aria-hidden="true">✓</div>
+    <h2 id="confirmation-heading">Elaborazione della richiesta in corso…</h2>
+    <p class="confirmation-error" id="confirmation-error" role="alert" hidden></p>
+    <button class="submit-button" id="new-operation" type="button" hidden>Nuova operazione</button>
+  </dialog>
+</body>
+</html>
